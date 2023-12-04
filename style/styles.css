@@ -1,0 +1,65 @@
+#image1 {
+    background-image: url(../assets/file\ 1.jpg) ;
+}
+
+.right {
+    display: flex;
+    justify-content: right;
+}
+
+.btnSizeHeart {
+    width: 40px;
+    border-radius: 5px;
+    background-color: #FFF9C8;
+}
+
+.heart {
+    background-color: #FFF9C8;
+    display: flex;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+}
+
+.searchFont {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.favFont {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.wrapper {
+    width: 250px;
+    max-width: 100%;
+    position: relative
+}
+
+.wrapper input {
+    background-color: white;
+}
+
+.wrapper button {
+    background-color: #FFF9C8;
+    position: absolute;
+    right: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.wrapper button img {
+    height: 24px;
+    width: 18px;
+    display: flex;
+    justify-content: center;
+}
+
+.favButton {
+    background-color: #FFF9C8;
+    border-radius: 5px;
+}
