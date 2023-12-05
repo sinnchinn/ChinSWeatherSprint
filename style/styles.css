@@ -36,7 +36,7 @@
 
 .favFont {
     font-family: 'Orbitron', sans-serif;
-    font-size: 10px;
+    font-size: 13px;
     font-weight: bold;
 }
 
@@ -80,6 +80,8 @@
 }
 /* search bar/favorites end */
 
+
+
 /* current location start */
 .headerFont {
     font-family: 'Road Rage', sans-serif;
@@ -89,18 +91,75 @@
 .bodyFont {
     font-family: 'Sometype Mono', monospace;
     font-size: 30px;
+    font-weight: bold;
+    line-height: 15px;
 }
 
 .bodyFont2 {
     font-family: 'Sometype Mono', monospace;
     font-size: 20px;
+    font-weight: bold;
+    line-height: 15px;
+}
+
+.bodyFont3 {
+    font-family: 'Sometype Mono', monospace;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.bodyFont4 {
+    font-family: 'Sometype Mono', monospace;
+    font-size: 60px;
+    font-weight: bolder;
 }
 
 .border1 {
-    background: #C8FFE5;
-    padding: 30px;
-    border-radius: 30px;
+    background: rgba(200, 255, 229, .9);
+    padding-top: 50px;
+    padding: 50px;
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
+    height: 300px;
 }
+
+.border2 {
+    background: rgba(200, 255, 229, .9);
+    padding-top: 50px;
+    padding: 50px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    height: 300px;
+}
+
+.middleBorder {
+    border-right: 3px solid gray;
+}
+
+.same {
+    display: inline-block;
+}
+
+.data {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.tempImg {
+    display: flex;
+    justify-content: left;
+    width: 100px;
+    height: 100px;
+}
+
+.tempImg2 {
+    width: 80px;
+    height: 100px;
+}
+
 /* current location end */
+
+
+
 
 /* ----- DAY MODE END ----- */
