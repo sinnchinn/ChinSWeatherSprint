@@ -54,10 +54,13 @@
 
 
 <!-- start current weather info container -->
-    <div class="container-fluid" style="padding-top: 40px;">
+    <div class="container-fluid" style="padding-top: 20px;">
         <div class="row">
             <div class="col-1"></div>
-            <div id="currentLocation" style="margin-left: 45px;" class="col-10 headerFont"> CURRENT LOCATION </div>
+            <div id="currentLocation" style="margin-left: 45px;" class="col-10 headerFont same"> 
+                CURRENT LOCATION 
+                <p id="country" class="same"></p>
+            </div>
             <div class="col-1"></div>
         </div>
         <div class="row">
@@ -74,19 +77,19 @@
                 <p class="bodyFont">TODAY</p>
                 <p id="currentDate" class="bodyFont2"> Today's date </p>
                 <p id="currentWeatherIcon" style="padding-top: 30px;" class="same bodyFont2">weather icon</p>
-                <p style="margin-left: 135px;" class="same bodyFont4">98°</p>
-                <p style="margin-left: 265px; text-align: center; line-height: 18px;" class="bodyFont2">overcast clouds</p>
+                <p id="currentTemp" style="margin-left: 20px;" class="same bodyFont4">98°</p>
+                <p id="iconData" style="margin-left: 150px; text-align: center; line-height: 18px;" class="bodyFont2">overcast clouds</p>
             </div>
             <div class="col-6 border2">
                 <div class="data">
                     <p class="bodyFont2 same">Max. Temperature</p>
-                    <p class="same bodyFont2"> Min. Temperature </p>
+                    <p style="margin-left: 50px;" class="same bodyFont2"> Min. Temperature </p>
                 </div>
-                <div style="margin-right: 100px;" class="data">
-                    <img class="tempImg same" src="./assets/max temp.png" alt="">
+                <div class="data">
+                    <img class="tempImg same center" src="./assets/max temp.png" alt="">
                     <p id="currentMaxTemp" class="same bodyFont3">98°</p>
 
-                    <img style="margin-left: 80px;" class="tempImg2 same" src="./assets/min temp.png" alt="">
+                    <img class="tempImg2 same center" src="./assets/min temp.png" alt="">
                     <p id="currentMinTemp" class="same bodyFont3">98°</p>
                 </div>
                 <div class="data">
@@ -105,12 +108,12 @@
 
 
 <!-- start 5 day forecast container -->
-    <div style="margin-left: 70px;" class="container data5 d-flex justify-content-center">
-        <div class="col-2 littleBox font5Day2">
-            <p id="laterDate1" class="center">date</p>
-            <p id="weatherIcon1" class="center">icon</p>
+    <div class="container-fluid data5">
+        <div style="padding: 20px; line-height: 30px; text-align: center;" class="col littleBox font5Day2">
+            <p id="laterDate1" >date</p>
+            <p id="weatherIcon1">icon</p>
             <p class="same">LOW:</p>
-            <p style="margin-left: 70px;" class="same">HIGH:</p>
+            <p style="margin-left: 90px;" class="same">HIGH:</p>
             <div>
                 <p id="minTemp1" class="same font5Data">56°</p>
                 <p class="same">
@@ -119,11 +122,11 @@
                 <p id="maxTemp1" class="same font5Data">98°</p>
             </div>
         </div>
-        <div class="col-2 littleBox font5Day2">
-            <p id="laterDate2" class="center">date</p>
-            <p id="weatherIcon2" class="center">icon</p>
+        <div style="padding: 20px; line-height: 30px; text-align: center;" class="col littleBox font5Day2">
+            <p id="laterDate2">date</p>
+            <p id="weatherIcon2">icon</p>
             <p class="same">LOW:</p>
-            <p style="margin-left: 70px;" class="same">HIGH:</p>
+            <p style="margin-left: 90px;" class="same">HIGH:</p>
             <div>
                 <p id="minTemp2" class="same font5Data">56°</p>
                 <p class="same">
@@ -132,11 +135,11 @@
                 <p id="maxTemp2" class="same font5Data">98°</p>
             </div>
         </div>
-        <div class="col-2 littleBox font5Day2">
-            <p id="laterDate3" class="center">date</p>
-            <p id="weatherIcon3" class="center">icon</p>
+        <div style="padding: 20px; line-height: 30px; text-align: center;" class="col littleBox font5Day2">
+            <p id="laterDate3">date</p>
+            <p id="weatherIcon3">icon</p>
             <p class="same">LOW:</p>
-            <p style="margin-left: 70px;" class="same">HIGH:</p>
+            <p style="margin-left: 90px;" class="same">HIGH:</p>
             <div>
                 <p id="minTemp3" class="same font5Data">56°</p>
                 <p class="same">
@@ -145,11 +148,11 @@
                 <p id="maxTemp3" class="same font5Data">98°</p>
             </div>
         </div>
-        <div class="col-2 littleBox font5Day2">
-            <p id="laterDate4" class="center">date</p>
-            <p id="weatherIcon4" class="center">icon</p>
+        <div style="padding: 20px; line-height: 30px; text-align: center;" class="col littleBox font5Day2">
+            <p id="laterDate4">date</p>
+            <p id="weatherIcon4">icon</p>
             <p class="same">LOW:</p>
-            <p style="margin-left: 70px;" class="same">HIGH:</p>
+            <p style="margin-left: 90px;" class="same">HIGH:</p>
             <div>
                 <p id="minTemp4" class="same font5Data">56°</p>
                 <p class="same">
@@ -158,11 +161,11 @@
                 <p id="maxTemp4" class="same font5Data">98°</p>
             </div>
         </div>
-        <div class="col-2 littleBox font5Day2">
-            <p id="laterDate5" class="center">date</p>
-            <p id="weatherIcon5" class="center">icon</p>
+        <div style="padding: 20px; line-height: 30px; text-align: center;" class="col littleBox font5Day2">
+            <p id="laterDate5">date</p>
+            <p id="weatherIcon5">icon</p>
             <p class="same">LOW:</p>
-            <p style="margin-left: 70px;" class="same">HIGH:</p>
+            <p style="margin-left: 90px;" class="same">HIGH:</p>
             <div>
                 <p id="minTemp5" class="same font5Data">56°</p>
                 <p class="same">

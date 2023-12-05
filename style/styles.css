@@ -1,8 +1,15 @@
+
 /* ----- DAY MODE START ----- */
 
 #image1 {
     background: url(../assets/file\ 1.jpg) no-repeat;
     background-size: 100%;
+}
+
+.smallBoxes {
+    padding: 20px;
+    text-align: center;
+    line-height: 30px;
 }
 
 /* search bar/favorites start */
@@ -138,14 +145,14 @@
 
 .bodyFont4 {
     font-family: 'Orbitron', sans-serif;
-    font-size: 60px;
+    font-size: 43px;
     font-weight: bolder;
 }
 
 .border1 {
     background: rgba(200, 255, 229, .9);
-    padding-top: 50px;
     padding: 50px;
+    padding-left: 100px;
     border-bottom-left-radius: 30px;
     border-top-left-radius: 30px;
     height: 300px;
@@ -153,8 +160,8 @@
 
 .border2 {
     background: rgba(200, 255, 229, .9);
-    padding-top: 50px;
     padding: 50px;
+    padding-right: 100px;
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
     height: 300px;
@@ -170,7 +177,7 @@
 
 .data {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 .tempImg {
@@ -193,18 +200,16 @@
     background-color: rgba(200, 245, 255, .9);
     border-radius: 30px;
     margin: 30px;
-    padding: 20px;
 }
 
 .data5 {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .center {
     display: flex;
     justify-content: center;
-    padding: 20px;
 }
 
 .font5Day {
@@ -223,12 +228,12 @@
 
 .font5Data {
     font-family: 'Orbitron', sans-serif;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: bold;
 }
 
 .weatherBar {
-    width: 70px;
+    width: 60px;
     height: 20px;
 }
 
@@ -256,15 +261,18 @@
     background: rgba(208, 200, 255, .9);
     padding-top: 50px;
     padding: 50px;
+    padding-left: 100px;
     border-bottom-left-radius: 30px;
     border-top-left-radius: 30px;
     height: 300px;
+
 }
 
 .border2Dark {
     background: rgba(208, 200, 255, .9);
     padding-top: 50px;
     padding: 50px;
+    padding-right: 100px;
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
     height: 300px;
