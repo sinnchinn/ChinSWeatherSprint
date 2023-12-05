@@ -78,6 +78,19 @@
     height: 38px;
     width: 100px;
 }
+
+.darkModeBtn {
+    width: 40px;
+    border-radius: 15px;
+    background-color: #FFF9C8;
+    border-width: 1px;
+    padding: 5px;
+}
+
+.moon {
+    background-color: #FFF9C8;
+    height: 30px;
+}
 /* search bar/favorites end */
 
 
@@ -103,13 +116,12 @@
 }
 
 .bodyFont3 {
-    font-family: 'Sometype Mono', monospace;
+    font-family: 'Orbitron';
     font-size: 40px;
-    font-weight: bold;
 }
 
 .bodyFont4 {
-    font-family: 'Sometype Mono', monospace;
+    font-family: 'Orbitron';
     font-size: 60px;
     font-weight: bolder;
 }
@@ -160,6 +172,51 @@
 /* current location end */
 
 
+/* 5 day forecast start */
+.littleBox {
+    background-color: rgba(200, 245, 255, .9);
+    border-radius: 30px;
+    margin: 30px;
+    padding: 20px;
+}
+
+.data5 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.font5Day {
+    font-family: 'Sometype Mono', monospace;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 5px;
+}
+
+.font5Day2 {
+    font-family: 'Sometype Mono', monospace;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1px;
+}
+
+.font5Data {
+    font-family: 'Orbitron';
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.weatherBar {
+    width: 70px;
+    height: 20px;
+}
+
+/* 5 day forecast end */
 
 
 /* ----- DAY MODE END ----- */

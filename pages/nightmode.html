@@ -7,23 +7,181 @@
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="./style/styles.css">
+    <link rel="stylesheet" href="../style/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dosis&family=Montserrat:wght@100&family=Orbitron&family=Rokkitt:wght@100&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Road+Rage&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sometype+Mono&display=swap" rel="stylesheet">
 </head>
 
-<body>
-    <h1>Hello, world!</h1>
+<body id="image1">
+
+    <div class="container">
+        <div style="padding-bottom: 25px;" class="row"></div>
+    </div>
+
+<!-- start search bar/heart/favorites icons -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-5"></div>
+            <div class="col-1 right">
+                <button class="btnSizeHeart">
+                    <img class="heart" src="../assets/heart.png" alt="">
+                </button>
+            </div>
+            <div class="col-3">
+                <div class="wrapper">
+                    <input class="searchFont" style="width: 350px;" type="text" placeholder="Enter a City">
+                    <button> <img src="../assets/585e4ad1cb11b227491c3391.png" alt=""> </button>
+                </div>
+            </div>
+            <div class="col-2" style="padding-right: 30px;">
+                <button class="favFont favButton" type="button" class="btn"> Favorites </button>
+                <a href="../index.html"><button style="margin-left: 20px;" class="darkModeBtn">
+                    <img class="moon" src="../assets/826853.png" alt="">
+                </button></a>
+            </div>
+        </div>
+    </div>
+<!-- end search bar/heart/favorites -->
+
+
+<!-- start current weather info container -->
+    <div class="container-fluid" style="padding-top: 40px;">
+        <div class="row">
+            <div class="col-1"></div>
+            <div style="margin-left: 45px;" class="col-10 headerFont"> CURRENT LOCATION </div>
+            <div class="col-1"></div>
+        </div>
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-10"></div>
+            <div class="col-1"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-5 border1 middleBorder">
+                <p class="bodyFont">TODAY</p>
+                <p class="bodyFont2"> Today's date </p>
+                <p style="padding-top: 30px;" class="same bodyFont2">weather icon</p>
+                <p style="margin-left: 165px;" class="same bodyFont4">98°</p>
+                <p style="margin-left: 280px; text-align: center; line-height: 18px;" class="bodyFont2">overcast clouds</p>
+            </div>
+            <div class="col-6 border2">
+                <div class="data">
+                    <p class="bodyFont2 same">Max. Temperature</p>
+                    <p class="same bodyFont2"> Min. Temperature </p>
+                </div>
+                <div style="margin-right: 100px;" class="data">
+                    <img class="tempImg same" src="../assets/max temp.png" alt="">
+                    <p class="same bodyFont3">98°</p>
+
+                    <img style="margin-left: 80px;" class="tempImg2 same" src="../assets/min temp.png" alt="">
+                    <p class="same bodyFont3">98°</p>
+                </div>
+                <div class="data">
+                    <p class="same bodyFont2">Feels Like</p>
+                    <p class="same bodyFont2">Humidity</p>
+                </div>
+                <div class="data">
+                    <p class="same bodyFont3">98°</p>
+                    <p class="same bodyFont3">98°</p>
+                </div>
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+<!-- end current weather info container -->
+
+
+<!-- start 5 day forecast container -->
+    <div style="margin-left: 70px;" class="container data5">
+        <div class="col-2 littleBox font5Day2">
+            <p class="center">date</p>
+            <p class="center">icon</p>
+            <p class="same">LOW:</p>
+            <p style="margin-left: 70px;" class="same">HIGH:</p>
+            <div>
+                <p class="same font5Data">56°</p>
+                <p class="same">
+                    <img class="weatherBar" src="../assets/weatherbar.png" alt="">
+                </p>
+                <p class="same font5Data">98°</p>
+            </div>
+        </div>
+        <div class="col-2 littleBox font5Day2">
+            <p class="center">date</p>
+            <p class="center">icon</p>
+            <p class="same">LOW:</p>
+            <p style="margin-left: 70px;" class="same">HIGH:</p>
+            <div>
+                <p class="same font5Data">56°</p>
+                <p class="same">
+                    <img class="weatherBar" src="../assets/weatherbar.png" alt="">
+                </p>
+                <p class="same font5Data">98°</p>
+            </div>
+        </div>
+        <div class="col-2 littleBox font5Day2">
+            <p class="center">date</p>
+            <p class="center">icon</p>
+            <p class="same">LOW:</p>
+            <p style="margin-left: 70px;" class="same">HIGH:</p>
+            <div>
+                <p class="same font5Data">56°</p>
+                <p class="same">
+                    <img class="weatherBar" src="../assets/weatherbar.png" alt="">
+                </p>
+                <p class="same font5Data">98°</p>
+            </div>
+        </div>
+        <div class="col-2 littleBox font5Day2">
+            <p class="center">date</p>
+            <p class="center">icon</p>
+            <p class="same">LOW:</p>
+            <p style="margin-left: 70px;" class="same">HIGH:</p>
+            <div>
+                <p class="same font5Data">56°</p>
+                <p class="same">
+                    <img class="weatherBar" src="../assets/weatherbar.png" alt="">
+                </p>
+                <p class="same font5Data">98°</p>
+            </div>
+        </div>
+        <div class="col-2 littleBox font5Day2">
+            <p class="center">date</p>
+            <p class="center">icon</p>
+            <p class="same">LOW:</p>
+            <p style="margin-left: 70px;" class="same">HIGH:</p>
+            <div>
+                <p class="same font5Data">56°</p>
+                <p class="same">
+                    <img class="weatherBar" src="../assets/weatherbar.png" alt="">
+                </p>
+                <p class="same font5Data">98°</p>
+            </div>
+        </div>
+    </div>
+<!-- end 5 day forecast container -->
 
 
 
 
 
-
-
-    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
-    <script type="module" src="./scripts/app.js"></script>
+    <script type="module" src="../scripts/app.js"></script>
 </body>
 
 </html>
