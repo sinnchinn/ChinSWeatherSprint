@@ -141,6 +141,10 @@ async function SearchInput(cityName, stateCode, countryCode) {
 function findCity() {
     let cityInput = userInput.value.toLowerCase();
 
+    
+
+
+
 
 }
 
