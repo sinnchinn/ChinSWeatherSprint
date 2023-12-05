@@ -220,3 +220,37 @@
 
 
 /* ----- DAY MODE END ----- */
+
+
+/* ----- NIGHT MODE START ----- */
+
+#image2 {
+    background-image: url(../assets/1109770\ 1.jpg);
+}
+
+/* current location start */
+.headerFontDark {
+    font-family: 'Road Rage', sans-serif;
+    font-size: 80px;
+    color: white;
+}
+
+.border1Dark {
+    background: rgba(208, 200, 255, .9);
+    padding-top: 50px;
+    padding: 50px;
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
+    height: 300px;
+}
+
+.border2Dark {
+    background: rgba(208, 200, 255, .9);
+    padding-top: 50px;
+    padding: 50px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    height: 300px;
+}
+
+/* ----- NIGHT MODE END ----- */
