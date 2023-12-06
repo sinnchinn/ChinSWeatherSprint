@@ -145,7 +145,7 @@
 
 .bodyFont4 {
     font-family: 'Orbitron', sans-serif;
-    font-size: 43px;
+    font-size: 50px;
     font-weight: bolder;
 }
 
@@ -201,7 +201,7 @@
 .littleBox {
     background-color: rgba(200, 245, 255, .9);
     border-radius: 30px;
-    margin: 30px;
+    margin: 25px;
 }
 
 .data5 {
