@@ -46,7 +46,7 @@ async function success(position) {
 
     //location
     let latitude = position.coords.latitude;
-    let longitude = position.coords.longitude
+    let longitude = position.coords.longitude;
     const weather5Day = await WeatherData(latitude, longitude);
     const weatherLocal = await CurrentWeather(latitude, longitude);
 
