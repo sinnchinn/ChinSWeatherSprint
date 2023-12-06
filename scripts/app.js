@@ -835,6 +835,8 @@ async function SearchInput(cityName) {
         default:
             break;
     }   
+
+    CurrentIcon();
 }
 
 
@@ -846,3 +848,4 @@ searchBtn.addEventListener('click', async function(e) {
 
 CurrentWeather();
 WeatherData();
+
