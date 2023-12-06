@@ -12,7 +12,7 @@ navigator.geolocation.getCurrentPosition(success, errorFunc);
 //description 
 
 let favoriteBtn = document.getElementById('favoriteBtn');
-let userInput = document.getElementById('enterCity');
+let userInput = document.getElementById('userInput');
 let searchBtn = document.getElementById('searchBtn');
 let currentLocation = document.getElementById('currentLocation');
 let currentDate = document.getElementById('currentDate');
@@ -45,24 +45,16 @@ let humidity = document.getElementById('humidity');
 let iconData = document.getElementById('iconData');
 
 
+
 async function success(position) {
     let latitude = position.coords.latitude;
     let longitude = position.coords.longitude;
-    let cityName = position.name;
-    let stateCode = position.state;
-    let countryCode = position.country;
-    const city = await SearchInput(cityName, stateCode, countryCode);
-    const state = await SearchInput(cityName, stateCode, countryCode);
-    const country = await SearchInput(cityName, stateCode, countryCode);
     const weather5Day = await WeatherData(latitude, longitude);
     const weatherLocal = await CurrentWeather(latitude, longitude);
 
     console.log('our latitude: ' + position.coords.latitude);
     console.log('out longitude: ' + position.coords.longitude);
 
-    console.log(city);
-    console.log(state);
-    console.log(country);
     console.log(weather5Day);
     console.log(weatherLocal);
 
@@ -106,7 +98,6 @@ async function success(position) {
     maxTemp5.innerText = weather5Day.list[33].main.temp_max + '°';
     minTemp5.innerText = weather5Day.list[33].main.temp_min + '°';
     console.log(Date());
-
 }
 
 
@@ -130,39 +121,66 @@ async function CurrentWeather(latitude, longitude) {
     return data;
 }
 
-async function SearchInput(cityName, stateCode, countryCode) {
+async function SearchInput(cityName) {
     
-    const promise = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${cityName},${stateCode},${countryCode}&limit=5&appid=01f84bef08f4ad88f46b58518d50114c`)
+    const promise = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=5&appid=01f84bef08f4ad88f46b58518d50114c`)
     const data = await promise.json();
 
-    return data;
-}
+    console.log(data);
+    currentLocation.textContent = `${data[0].name.toUpperCase()}, ${data[0].state.toUpperCase()}, ${data[0].country.toUpperCase()}`;
 
-function findCity() {
-    let cityInput = userInput.value.toLowerCase();
+    let latitude = data[0].lat;
+    let longitude = data[0].lon;
+    const weather5Day = await WeatherData(latitude, longitude);
+    const weatherLocal = await CurrentWeather(latitude, longitude);
 
+    console.log
+
+    // current weather forecast
+    // currentDate.innerText = weather5Day2.list[0].dt_txt;
+    currentTemp.innerText = weatherLocal.main.temp + '°';
+    currentMaxTemp.innerText = weatherLocal.main.temp_max + '°';
+    currentMinTemp.innerText = weatherLocal.main.temp_min + '°';
+    feelsLike.innerText = weatherLocal.main.feels_like + '°';
+    humidity.innerText = weatherLocal.main.humidity + '%';
+    iconData.innerText = weatherLocal.weather[0].description;
+
+    // day 1, 5 day forecast
+    weatherIcon1.innerText = weather5Day.list[1].weather[0].icon;
+    laterDate1.innerText = weather5Day.list[1].dt_txt;
+    maxTemp1.innerText = weather5Day.list[1].main.temp_max + '°';
+    minTemp1.innerText = weather5Day.list[1].main.temp_min + '°';
     
+    // day 2, 5 day forecast
+    laterDate2.innerText = weather5Day.list[9].dt_txt;
+    weatherIcon2.innerText = weather5Day.list[9].weather[0].icon;
+    maxTemp2.innerText = weather5Day.list[9].main.temp_max + '°';
+    minTemp2.innerText = weather5Day.list[9].main.temp_min + '°';
 
+    // day 3, 5 day forecast
+    laterDate3.innerText = weather5Day.list[17].dt_txt;
+    weatherIcon3.innerText = weather5Day.list[17].weather[0].icon;
+    maxTemp3.innerText = weather5Day.list[17].main.temp_max + '°';
+    minTemp3.innerText = weather5Day.list[17].main.temp_min + '°';
 
+    // day 4, 5 day forecast 
+    laterDate4.innerText = weather5Day.list[25].dt_txt;
+    weatherIcon4.innerText = weather5Day.list[25].weather[0].icon;
+    maxTemp4.innerText = weather5Day.list[25].main.temp_max + '°';
+    minTemp4.innerText = weather5Day.list[25].main.temp_min + '°';
 
-
+    // day 5, 5 day forecast
+    laterDate5.innerText = weather5Day.list[33].dt_txt;
+    weatherIcon5.innerText = weather5Day.list[33].weather[0].icon;
+    maxTemp5.innerText = weather5Day.list[33].main.temp_max + '°';
+    minTemp5.innerText = weather5Day.list[33].main.temp_min + '°';
 }
 
 
-searchBtn.addEventListener('click', function(e) {
-    findCity();
-})
+searchBtn.addEventListener('click', async function(e) {
+    await SearchInput(userInput.value);
+    console.log(userInput.value);
+});
 
-SearchInput();
 CurrentWeather();
 WeatherData();
-
-
-
-
-
-
-
-
-
-
