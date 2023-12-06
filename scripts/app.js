@@ -1,3 +1,5 @@
+import {apiKey} from './environment.js'
+
 navigator.geolocation.getCurrentPosition(success, errorFunc);
 
 //user input
@@ -22,12 +24,6 @@ let laterDate3 = document.getElementById('laterDate3');
 let laterDate4 = document.getElementById('laterDate4');
 let laterDate5 = document.getElementById('laterDate5');
 let currentTemp = document.getElementById('currentTemp')
-let currentWeatherIcon = document.getElementById('currentWeatherIcon');
-let weatherIcon1 = document.getElementById('weatherIcon1');
-let weatherIcon2 = document.getElementById('weatherIcon2');
-let weatherIcon3 = document.getElementById('weatherIcon3');
-let weatherIcon4 = document.getElementById('weatherIcon4');
-let weatherIcon5 = document.getElementById('weatherIcon5');
 let currentMaxTemp = document.getElementById('currentMaxTemp');
 let maxTemp1 = document.getElementById('maxTemp1');
 let maxTemp2 = document.getElementById('maxTemp2');
@@ -47,19 +43,51 @@ let iconData = document.getElementById('iconData');
 
 
 async function success(position) {
+
+    //location
     let latitude = position.coords.latitude;
-    let longitude = position.coords.longitude;
+    let longitude = position.coords.longitude
     const weather5Day = await WeatherData(latitude, longitude);
     const weatherLocal = await CurrentWeather(latitude, longitude);
 
+    //dates
+    const now = new Date();
+    let later1 = new Date(weather5Day.list[1].dt_txt);
+    let later2 = new Date(weather5Day.list[9].dt_txt);
+    let later3 = new Date(weather5Day.list[17].dt_txt);
+    let later4 = new Date(weather5Day.list[25].dt_txt);
+    let later5 = new Date(weather5Day.list[33].dt_txt);
+
+    // icons
+    let dataIcon = weatherLocal.weather[0].icon;
+    document.getElementById('currentWeatherIcon').src = `http://openweathermap.org/img/wn/${dataIcon}.png`
+
+    let dataIcon1 = weather5Day.list[1].weather[0].icon;
+    document.getElementById('icon1').src = `http://openweathermap.org/img/wn/${dataIcon1}.png`
+
+    let dataIcon2 = weather5Day.list[9].weather[0].icon;
+    document.getElementById('icon2').src = `http://openweathermap.org/img/wn/${dataIcon2}.png`
+
+    let dataIcon3 = weather5Day.list[17].weather[0].icon;
+    document.getElementById('icon3').src = `http://openweathermap.org/img/wn/${dataIcon3}.png`
+
+    let dataIcon4 = weather5Day.list[25].weather[0].icon;
+    document.getElementById('icon4').src = `http://openweathermap.org/img/wn/${dataIcon4}.png`
+
+    let dataIcon5 = weather5Day.list[33].weather[0].icon;
+    document.getElementById('icon5').src = `http://openweathermap.org/img/wn/${dataIcon5}.png`
+
+
+    
     console.log('our latitude: ' + position.coords.latitude);
     console.log('out longitude: ' + position.coords.longitude);
 
     console.log(weather5Day);
     console.log(weatherLocal);
 
+
     // current weather forecast
-    currentDate.innerText = weather5Day.list[0].dt_txt;
+    currentDate.innerText = now.toDateString();
     currentLocation.innerText = weatherLocal.name.toUpperCase();
     currentTemp.innerText = weatherLocal.main.temp + '°';
     currentMaxTemp.innerText = weatherLocal.main.temp_max + '°';
@@ -69,35 +97,31 @@ async function success(position) {
     iconData.innerText = weatherLocal.weather[0].description;
 
     // day 1, 5 day forecast
-    weatherIcon1.innerText = weather5Day.list[1].weather[0].icon;
-    laterDate1.innerText = weather5Day.list[1].dt_txt;
+    laterDate1.innerText = later1.toDateString();
     maxTemp1.innerText = weather5Day.list[1].main.temp_max + '°';
     minTemp1.innerText = weather5Day.list[1].main.temp_min + '°';
     
     // day 2, 5 day forecast
-    laterDate2.innerText = weather5Day.list[9].dt_txt;
-    weatherIcon2.innerText = weather5Day.list[9].weather[0].icon;
+    laterDate2.innerText = later2.toDateString();
     maxTemp2.innerText = weather5Day.list[9].main.temp_max + '°';
     minTemp2.innerText = weather5Day.list[9].main.temp_min + '°';
 
     // day 3, 5 day forecast
-    laterDate3.innerText = weather5Day.list[17].dt_txt;
-    weatherIcon3.innerText = weather5Day.list[17].weather[0].icon;
+    laterDate3.innerText = later3.toDateString();
     maxTemp3.innerText = weather5Day.list[17].main.temp_max + '°';
     minTemp3.innerText = weather5Day.list[17].main.temp_min + '°';
 
     // day 4, 5 day forecast 
-    laterDate4.innerText = weather5Day.list[25].dt_txt;
-    weatherIcon4.innerText = weather5Day.list[25].weather[0].icon;
+    laterDate4.innerText = later4.toDateString();
     maxTemp4.innerText = weather5Day.list[25].main.temp_max + '°';
     minTemp4.innerText = weather5Day.list[25].main.temp_min + '°';
 
     // day 5, 5 day forecast
-    laterDate5.innerText = weather5Day.list[33].dt_txt;
-    weatherIcon5.innerText = weather5Day.list[33].weather[0].icon;
+    laterDate5.innerText = later5.toDateString();
     maxTemp5.innerText = weather5Day.list[33].main.temp_max + '°';
     minTemp5.innerText = weather5Day.list[33].main.temp_min + '°';
     console.log(Date());
+    
 }
 
 
@@ -107,7 +131,7 @@ function errorFunc(error) {
 
 async function WeatherData(latitude, longitude) {
 
-    const promise = await fetch (`https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&units=imperial&appid=01f84bef08f4ad88f46b58518d50114c`)
+    const promise = await fetch (`https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&units=imperial&appid=${apiKey}`)
     const data = await promise.json();
 
     return data;
@@ -115,7 +139,7 @@ async function WeatherData(latitude, longitude) {
 
 async function CurrentWeather(latitude, longitude) {
 
-    const promise = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&appid=01f84bef08f4ad88f46b58518d50114c`)
+    const promise = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&appid=${apiKey}`)
     const data = await promise.json();
 
     return data;
@@ -123,7 +147,7 @@ async function CurrentWeather(latitude, longitude) {
 
 async function SearchInput(cityName) {
     
-    const promise = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=5&appid=01f84bef08f4ad88f46b58518d50114c`)
+    const promise = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=5&appid=${apiKey}`)
     const data = await promise.json();
 
     console.log(data);
@@ -134,10 +158,17 @@ async function SearchInput(cityName) {
     const weather5Day = await WeatherData(latitude, longitude);
     const weatherLocal = await CurrentWeather(latitude, longitude);
 
-    console.log
+    //dates
+    const now = new Date();
+    let later1 = new Date(weather5Day.list[1].dt_txt);
+    let later2 = new Date(weather5Day.list[9].dt_txt);
+    let later3 = new Date(weather5Day.list[17].dt_txt);
+    let later4 = new Date(weather5Day.list[25].dt_txt);
+    let later5 = new Date(weather5Day.list[33].dt_txt);
+
 
     // current weather forecast
-    // currentDate.innerText = weather5Day2.list[0].dt_txt;
+    currentDate.innerText = now.toDateString();
     currentTemp.innerText = weatherLocal.main.temp + '°';
     currentMaxTemp.innerText = weatherLocal.main.temp_max + '°';
     currentMinTemp.innerText = weatherLocal.main.temp_min + '°';
@@ -146,34 +177,48 @@ async function SearchInput(cityName) {
     iconData.innerText = weatherLocal.weather[0].description;
 
     // day 1, 5 day forecast
-    weatherIcon1.innerText = weather5Day.list[1].weather[0].icon;
-    laterDate1.innerText = weather5Day.list[1].dt_txt;
+    laterDate1.innerText = later1.toDateString();
     maxTemp1.innerText = weather5Day.list[1].main.temp_max + '°';
     minTemp1.innerText = weather5Day.list[1].main.temp_min + '°';
     
     // day 2, 5 day forecast
-    laterDate2.innerText = weather5Day.list[9].dt_txt;
-    weatherIcon2.innerText = weather5Day.list[9].weather[0].icon;
+    laterDate2.innerText = later2.toDateString();
     maxTemp2.innerText = weather5Day.list[9].main.temp_max + '°';
     minTemp2.innerText = weather5Day.list[9].main.temp_min + '°';
 
     // day 3, 5 day forecast
-    laterDate3.innerText = weather5Day.list[17].dt_txt;
-    weatherIcon3.innerText = weather5Day.list[17].weather[0].icon;
+    laterDate3.innerText = later3.toDateString();
     maxTemp3.innerText = weather5Day.list[17].main.temp_max + '°';
     minTemp3.innerText = weather5Day.list[17].main.temp_min + '°';
 
     // day 4, 5 day forecast 
-    laterDate4.innerText = weather5Day.list[25].dt_txt;
-    weatherIcon4.innerText = weather5Day.list[25].weather[0].icon;
+    laterDate4.innerText = later4.toDateString();
     maxTemp4.innerText = weather5Day.list[25].main.temp_max + '°';
     minTemp4.innerText = weather5Day.list[25].main.temp_min + '°';
 
     // day 5, 5 day forecast
-    laterDate5.innerText = weather5Day.list[33].dt_txt;
-    weatherIcon5.innerText = weather5Day.list[33].weather[0].icon;
+    laterDate5.innerText = later5.toDateString();
     maxTemp5.innerText = weather5Day.list[33].main.temp_max + '°';
     minTemp5.innerText = weather5Day.list[33].main.temp_min + '°';
+
+    // icons
+    let dataIcon = weatherLocal.weather[0].icon;
+    document.getElementById('currentWeatherIcon').src = `http://openweathermap.org/img/wn/${dataIcon}.png`
+
+    let dataIcon1 = weather5Day.list[1].weather[0].icon;
+    document.getElementById('icon1').src = `http://openweathermap.org/img/wn/${dataIcon1}.png`
+
+    let dataIcon2 = weather5Day.list[9].weather[0].icon;
+    document.getElementById('icon2').src = `http://openweathermap.org/img/wn/${dataIcon2}.png`
+
+    let dataIcon3 = weather5Day.list[17].weather[0].icon;
+    document.getElementById('icon3').src = `http://openweathermap.org/img/wn/${dataIcon3}.png`
+
+    let dataIcon4 = weather5Day.list[25].weather[0].icon;
+    document.getElementById('icon4').src = `http://openweathermap.org/img/wn/${dataIcon4}.png`
+
+    let dataIcon5 = weather5Day.list[33].weather[0].icon;
+    document.getElementById('icon5').src = `http://openweathermap.org/img/wn/${dataIcon5}.png`
 }
 
 
@@ -181,6 +226,7 @@ searchBtn.addEventListener('click', async function(e) {
     await SearchInput(userInput.value);
     console.log(userInput.value);
 });
+
 
 CurrentWeather();
 WeatherData();

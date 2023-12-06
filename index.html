@@ -27,7 +27,7 @@
         <div style="padding-bottom: 25px;" class="row"></div>
     </div>
 
-<!-- start search bar/heart/favorites icons -->
+    <!-- start search bar/heart/favorites icons -->
     <div class="container-fluid">
         <div class="row">
             <div class="col-5"></div>
@@ -38,27 +38,29 @@
             </div>
             <div class="col-3">
                 <div class="wrapper">
-                    <input id="userInput" class="searchFont" style="width: 350px;" type="text" placeholder="Enter City, State">
+                    <input id="userInput" class="searchFont" style="width: 350px;" type="text"
+                        placeholder="Enter City, State">
                     <button id="searchBtn"> <img src="./assets/585e4ad1cb11b227491c3391.png" alt=""> </button>
                 </div>
             </div>
             <div class="col-2" style="padding-right: 30px;">
-                <a href="./pages/favoritespage.html"><button class="favFont favButton" type="button" class="btn"> Favorites </button></a>
+                <a href="./pages/favoritespage.html"><button class="favFont favButton" type="button" class="btn">
+                        Favorites </button></a>
                 <a href="./pages/nightmode.html"><button style="margin-left: 20px;" class="darkModeBtn">
-                    <img class="moon" src="./assets/moon.png" alt="">
-                </button></a>
+                        <img class="moon" src="./assets/moon.png" alt="">
+                    </button></a>
             </div>
         </div>
     </div>
-<!-- end search bar/heart/favorites -->
+    <!-- end search bar/heart/favorites -->
 
 
-<!-- start current weather info container -->
+    <!-- start current weather info container -->
     <div class="container-fluid" style="padding-top: 20px;">
         <div class="row">
             <div class="col-1"></div>
-            <div id="currentLocation" style="margin-left: 45px;" class="col-10 headerFont same"> 
-                CURRENT LOCATION 
+            <div id="currentLocation" style="margin-left: 45px;" class="col-10 headerFont same">
+                CURRENT LOCATION
                 <p id="country" class="same"></p>
             </div>
             <div class="col-1"></div>
@@ -75,9 +77,10 @@
             <div class="col-5 border1 middleBorder">
                 <p class="bodyFont">TODAY</p>
                 <p id="currentDate" class="bodyFont2"> Today's date </p>
-                <p id="currentWeatherIcon" style="padding-top: 30px;" class="same bodyFont2">weather icon</p>
+                <img id="currentWeatherIcon" src="" alt="">
                 <p id="currentTemp" style="margin-left: 100px;" class="same bodyFont4">98°</p>
-                <p id="iconData" style="margin-left: 180px; text-align: center; line-height: 18px;" class="bodyFont2">overcast clouds</p>
+                <p id="iconData" style="margin-left: 180px; text-align: center; line-height: 18px;" class="bodyFont2">
+                    overcast clouds</p>
             </div>
             <div class="col-7 border2">
                 <div class="data">
@@ -102,14 +105,16 @@
             </div>
         </div>
     </div>
-<!-- end current weather info container -->
+    <!-- end current weather info container -->
 
 
-<!-- start 5 day forecast container -->
+    <!-- start 5 day forecast container -->
     <div class="container-fluid data5">
         <div style="padding: 20px; line-height: 30px; text-align: center;" class="col littleBox font5Day2">
-            <p id="laterDate1" >date</p>
-            <p id="weatherIcon1">icon</p>
+            <p id="laterDate1">date</p>
+            <div class="center">
+                <img style="width: 120px; height: 120px;" id="icon1" src="" alt="">
+            </div>
             <p class="same">LOW:</p>
             <p style="margin-left: 90px;" class="same">HIGH:</p>
             <div>
@@ -122,7 +127,9 @@
         </div>
         <div style="padding: 20px; line-height: 30px; text-align: center;" class="col littleBox font5Day2">
             <p id="laterDate2">date</p>
-            <p id="weatherIcon2">icon</p>
+            <div class="center">
+                <img style="width: 120px; height: 120px;" id="icon2" src="" alt="">
+            </div>
             <p class="same">LOW:</p>
             <p style="margin-left: 90px;" class="same">HIGH:</p>
             <div>
@@ -135,7 +142,9 @@
         </div>
         <div style="padding: 20px; line-height: 30px; text-align: center;" class="col littleBox font5Day2">
             <p id="laterDate3">date</p>
-            <p id="weatherIcon3">icon</p>
+            <div class="center">
+                <img style="width: 120px; height: 120px;" id="icon3" src="" alt="">
+            </div>
             <p class="same">LOW:</p>
             <p style="margin-left: 90px;" class="same">HIGH:</p>
             <div>
@@ -148,7 +157,9 @@
         </div>
         <div style="padding: 20px; line-height: 30px; text-align: center;" class="col littleBox font5Day2">
             <p id="laterDate4">date</p>
-            <p id="weatherIcon4">icon</p>
+            <div class="center">
+                <img style="width: 120px; height: 120px;" id="icon4" src="" alt="">
+            </div>
             <p class="same">LOW:</p>
             <p style="margin-left: 90px;" class="same">HIGH:</p>
             <div>
@@ -161,7 +172,9 @@
         </div>
         <div style="padding: 20px; line-height: 30px; text-align: center;" class="col littleBox font5Day2">
             <p id="laterDate5">date</p>
-            <p id="weatherIcon5">icon</p>
+            <div class="center">
+                <img style="width: 120px; height: 120px;" id="icon5" src="" alt="">
+            </div>
             <p class="same">LOW:</p>
             <p style="margin-left: 90px;" class="same">HIGH:</p>
             <div>
@@ -173,7 +186,7 @@
             </div>
         </div>
     </div>
-<!-- end 5 day forecast container -->
+    <!-- end 5 day forecast container -->
 
 
 
