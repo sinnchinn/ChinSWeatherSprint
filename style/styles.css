@@ -241,6 +241,42 @@
 
 /* 5 day forecast end */
 
+/* button hovers start */
+
+.buttonDayMode button:hover {
+    background-color: #FFD541;
+    color: black;
+}
+
+.btnSizeHeart :hover {
+    background-color: #FFD541;
+}
+
+.darkModeBtn :hover {
+    background-color: #FFD541;
+}
+.moon :hover {
+    background-color: #FFD541;
+}
+
+.buttonDarkMode button:hover {
+    background-color: rgb(116, 61, 132);
+    color: white;
+}
+
+.btnSizeHeartDark :hover {
+    background-color:  rgb(116, 61, 132);
+}
+
+.lightModeBtn :hover {
+    background-color: rgb(116, 61, 132);
+}
+
+.sun :hover {
+    background-color:  rgb(116, 61, 132);
+}
+
+/* button hovers end */
 
 /* ----- DAY MODE END ----- */
 

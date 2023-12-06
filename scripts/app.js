@@ -68,7 +68,10 @@ async function success(position) {
 
     //all switches for icons
     switch (dataIcon) {
-        case '04d', '04n':
+        case '04d':
+            document.getElementById('currentWeatherIcon').src = `../assets/overcastclouds.png`
+            break;
+        case '04n':
             document.getElementById('currentWeatherIcon').src = `../assets/overcastclouds.png`
             break;
         case '01n':
@@ -77,26 +80,51 @@ async function success(position) {
         case '01d':
             document.getElementById('currentWeatherIcon').src = `../assets/clearsky.png`
             break;
-        case '03d', '03n':
+        case '03d':
             document.getElementById('currentWeatherIcon').src = `../assets/scatteredclouds.png`
             break;
-        case '09d', '10d', '09n', '10n':
+        case '03n':
+            document.getElementById('currentWeatherIcon').src = `../assets/scatteredclouds.png`
+            break;
+        case '09d':
             document.getElementById('currentWeatherIcon').src = `../assets/rain.png`
             break;
-        case '11d', '11n':
+        case '10d':
+            document.getElementById('currentWeatherIcon').src = `../assets/rain.png`
+            break;
+        case '09n':
+            document.getElementById('currentWeatherIcon').src = `../assets/rain.png`
+            break;
+        case '10n':
+            document.getElementById('currentWeatherIcon').src = `../assets/rain.png`
+            break;
+        case '11d':
             document.getElementById('currentWeatherIcon').src = `../assets/thunder.png`
             break;
-        case '13d', '13n':
+        case '11n':
+            document.getElementById('currentWeatherIcon').src = `../assets/thunder.png`
+            break;
+        case '13d':
             document.getElementById('currentWeatherIcon').src = `../assets/snow.png`
             break;
-        case '50d', '50n': 
+        case '13n':
+            document.getElementById('currentWeatherIcon').src = `../assets/snow.png`
+            break;
+        case '50d': 
             document.getElementById('currentWeatherIcon').src = `../assets/windy.png`
+            break;
+        case '50n':
+            document.getElementById('currentWeatherIcon').src = `../assets/windy.png`
+            break;
         default:
             break;
     }
 
     switch (dataIcon1) {
-        case '04d', '04n':
+        case '04d':
+            document.getElementById('icon1').src = `../assets/overcastclouds.png`
+            break;
+        case '04n':
             document.getElementById('icon1').src = `../assets/overcastclouds.png`
             break;
         case '01d':
@@ -105,26 +133,51 @@ async function success(position) {
         case '01n':
             document.getElementById('icon1').src = `../assets/nightsky.png`
             break;
-        case '03d', '03n':
+        case '03d':
             document.getElementById('icon1').src = `../assets/scatteredclouds.png`
             break;
-        case '09d', '10d', '09n', '10n':
+        case '03n':
+            document.getElementById('icon1').src = `../assets/scatteredclouds.png`
+            break;
+        case '09d':
             document.getElementById('icon1').src = `../assets/rain.png`
             break;
-        case '11d', '11n':
+        case '10d':
+            document.getElementById('icon1').src = `../assets/rain.png`
+            break;
+        case '09n':
+            document.getElementById('icon1').src = `../assets/rain.png`
+            break;
+        case '10n':
+            document.getElementById('icon1').src = `../assets/rain.png`
+            break;
+        case '11d':
             document.getElementById('icon1').src = `../assets/thunder.png`
             break;
-        case '13d', '13n':
+        case '11n':
+            document.getElementById('icon1').src = `../assets/thunder.png`
+            break;
+        case '13d':
             document.getElementById('icon1').src = `../assets/snow.png`
             break;
-        case '50d', '50n': 
+        case '13n':
+            document.getElementById('icon1').src = `../assets/snow.png`
+            break;
+        case '50d': 
             document.getElementById('icon1').src = `../assets/windy.png`
+            break;
+        case '50n':
+            document.getElementById('icon1').src = `../assets/windy.png`
+            break;
         default:
             break;
     }
 
     switch (dataIcon2) {
-        case '04d', '04n':
+        case '04d':
+            document.getElementById('icon2').src = `../assets/overcastclouds.png`
+            break;
+        case '04n':
             document.getElementById('icon2').src = `../assets/overcastclouds.png`
             break;
         case '01d':
@@ -133,26 +186,51 @@ async function success(position) {
         case '01n':
             document.getElementById('icon2').src = `../assets/nightsky.png`
             break;
-        case '03d', '03n':
+        case '03d':
             document.getElementById('icon2').src = `../assets/scatteredclouds.png`
             break;
-        case '09d', '10d', '09n', '10n':
+        case '03n':
+            document.getElementById('icon2').src = `../assets/scatteredclouds.png`
+            break;
+        case '09d':
             document.getElementById('icon2').src = `../assets/rain.png`
             break;
-        case '11d', '11n':
+        case '10d':
+            document.getElementById('icon2').src = `../assets/rain.png`
+            break;
+        case '09n':
+            document.getElementById('icon2').src = `../assets/rain.png`
+            break;
+        case '10n':
+            document.getElementById('icon2').src = `../assets/rain.png`
+            break;
+        case '11d':
             document.getElementById('icon2').src = `../assets/thunder.png`
             break;
-        case '13d', '13n':
+        case '11n':
+            document.getElementById('icon2').src = `../assets/thunder.png`
+            break;
+        case '13d':
             document.getElementById('icon2').src = `../assets/snow.png`
             break;
-        case '50d', '50n': 
+        case '13n':
+            document.getElementById('icon2').src = `../assets/snow.png`
+            break;
+        case '50d': 
             document.getElementById('icon2').src = `../assets/windy.png`
+            break;
+        case '50n':
+            document.getElementById('icon2').src = `../assets/windy.png`
+            break;
         default:
             break;
     }
-
+    
     switch (dataIcon3) {
-        case '04d', '04n':
+        case '04d':
+            document.getElementById('icon3').src = `../assets/overcastclouds.png`
+            break;
+        case '04n':
             document.getElementById('icon3').src = `../assets/overcastclouds.png`
             break;
         case '01d':
@@ -161,26 +239,51 @@ async function success(position) {
         case '01n':
             document.getElementById('icon3').src = `../assets/nightsky.png`
             break;
-        case '03d', '03n':
+        case '03d':
             document.getElementById('icon3').src = `../assets/scatteredclouds.png`
             break;
-        case '09d', '10d', '09n', '10n':
+        case '03n':
+            document.getElementById('icon3').src = `../assets/scatteredclouds.png`
+            break;
+        case '09d':
             document.getElementById('icon3').src = `../assets/rain.png`
             break;
-        case '11d', '11n':
+        case '10d':
+            document.getElementById('icon3').src = `../assets/rain.png`
+            break;
+        case '09n':
+            document.getElementById('icon3').src = `../assets/rain.png`
+            break;
+        case '10n':
+            document.getElementById('icon3').src = `../assets/rain.png`
+            break;
+        case '11d':
             document.getElementById('icon3').src = `../assets/thunder.png`
             break;
-        case '13d', '13n':
+        case '11n':
+            document.getElementById('icon3').src = `../assets/thunder.png`
+            break;
+        case '13d':
             document.getElementById('icon3').src = `../assets/snow.png`
             break;
-        case '50d', '50n': 
+        case '13n':
+            document.getElementById('icon3').src = `../assets/snow.png`
+            break;
+        case '50d': 
             document.getElementById('icon3').src = `../assets/windy.png`
+            break;
+        case '50n':
+            document.getElementById('icon3').src = `../assets/windy.png`
+            break;
         default:
             break;
     }
-    
+
     switch (dataIcon4) {
-        case '04d', '04n':
+        case '04d':
+            document.getElementById('icon4').src = `../assets/overcastclouds.png`
+            break;
+        case '04n':
             document.getElementById('icon4').src = `../assets/overcastclouds.png`
             break;
         case '01d':
@@ -189,26 +292,51 @@ async function success(position) {
         case '01n':
             document.getElementById('icon4').src = `../assets/nightsky.png`
             break;
-        case '03d', '03n':
+        case '03d':
             document.getElementById('icon4').src = `../assets/scatteredclouds.png`
             break;
-        case '09d', '10d', '09n', '10n':
+        case '03n':
+            document.getElementById('icon4').src = `../assets/scatteredclouds.png`
+            break;
+        case '09d':
             document.getElementById('icon4').src = `../assets/rain.png`
             break;
-        case '11d', '11n':
+        case '10d':
+            document.getElementById('icon4').src = `../assets/rain.png`
+            break;
+        case '09n':
+            document.getElementById('icon4').src = `../assets/rain.png`
+            break;
+        case '10n':
+            document.getElementById('icon4').src = `../assets/rain.png`
+            break;
+        case '11d':
             document.getElementById('icon4').src = `../assets/thunder.png`
             break;
-        case '13d', '13n':
+        case '11n':
+            document.getElementById('icon4').src = `../assets/thunder.png`
+            break;
+        case '13d':
             document.getElementById('icon4').src = `../assets/snow.png`
             break;
-        case '50d', '50n': 
+        case '13n':
+            document.getElementById('icon4').src = `../assets/snow.png`
+            break;
+        case '50d': 
             document.getElementById('icon4').src = `../assets/windy.png`
+            break;
+        case '50n':
+            document.getElementById('icon4').src = `../assets/windy.png`
+            break;
         default:
             break;
     }
 
     switch (dataIcon5) {
-        case '04d', '04n':
+        case '04d':
+            document.getElementById('icon5').src = `../assets/overcastclouds.png`
+            break;
+        case '04n':
             document.getElementById('icon5').src = `../assets/overcastclouds.png`
             break;
         case '01d':
@@ -217,23 +345,46 @@ async function success(position) {
         case '01n':
             document.getElementById('icon5').src = `../assets/nightsky.png`
             break;
-        case '03d', '03n':
+        case '03d':
             document.getElementById('icon5').src = `../assets/scatteredclouds.png`
             break;
-        case '09d', '10d', '09n', '10n':
+        case '03n':
+            document.getElementById('icon5').src = `../assets/scatteredclouds.png`
+            break;
+        case '09d':
             document.getElementById('icon5').src = `../assets/rain.png`
             break;
-        case '11d', '11n':
+        case '10d':
+            document.getElementById('icon5').src = `../assets/rain.png`
+            break;
+        case '09n':
+            document.getElementById('icon5').src = `../assets/rain.png`
+            break;
+        case '10n':
+            document.getElementById('icon5').src = `../assets/rain.png`
+            break;
+        case '11d':
             document.getElementById('icon5').src = `../assets/thunder.png`
             break;
-        case '13d', '13n':
+        case '11n':
+            document.getElementById('icon5').src = `../assets/thunder.png`
+            break;
+        case '13d':
             document.getElementById('icon5').src = `../assets/snow.png`
             break;
-        case '50d', '50n': 
+        case '13n':
+            document.getElementById('icon5').src = `../assets/snow.png`
+            break;
+        case '50d': 
             document.getElementById('icon5').src = `../assets/windy.png`
+            break;
+        case '50n':
+            document.getElementById('icon5').src = `../assets/windy.png`
+            break;
         default:
             break;
     }
+    
 
     console.log('our latitude: ' + position.coords.latitude);
     console.log('out longitude: ' + position.coords.longitude);
@@ -357,24 +508,333 @@ async function SearchInput(cityName) {
     maxTemp5.innerText = weather5Day.list[33].main.temp_max + '°';
     minTemp5.innerText = weather5Day.list[33].main.temp_min + '°';
 
+
     // icons
     let dataIcon = weatherLocal.weather[0].icon;
-    document.getElementById('currentWeatherIcon').src = `http://openweathermap.org/img/wn/${dataIcon}.png`
-
     let dataIcon1 = weather5Day.list[1].weather[0].icon;
-    document.getElementById('icon1').src = `http://openweathermap.org/img/wn/${dataIcon1}.png`
-
     let dataIcon2 = weather5Day.list[9].weather[0].icon;
-    document.getElementById('icon2').src = `http://openweathermap.org/img/wn/${dataIcon2}.png`
-
     let dataIcon3 = weather5Day.list[17].weather[0].icon;
-    document.getElementById('icon3').src = `http://openweathermap.org/img/wn/${dataIcon3}.png`
-
     let dataIcon4 = weather5Day.list[25].weather[0].icon;
-    document.getElementById('icon4').src = `http://openweathermap.org/img/wn/${dataIcon4}.png`
-
     let dataIcon5 = weather5Day.list[33].weather[0].icon;
-    document.getElementById('icon5').src = `http://openweathermap.org/img/wn/${dataIcon5}.png`
+
+    //all switches for icons
+    switch (dataIcon) {
+        case '04d':
+            document.getElementById('currentWeatherIcon').src = `../assets/overcastclouds.png`
+            break;
+        case '04n':
+            document.getElementById('currentWeatherIcon').src = `../assets/overcastclouds.png`
+            break;
+        case '01n':
+            document.getElementById('currentWeatherIcon').src = `../assets/nightsky.png`
+            break;
+        case '01d':
+            document.getElementById('currentWeatherIcon').src = `../assets/clearsky.png`
+            break;
+        case '03d':
+            document.getElementById('currentWeatherIcon').src = `../assets/scatteredclouds.png`
+            break;
+        case '03n':
+            document.getElementById('currentWeatherIcon').src = `../assets/scatteredclouds.png`
+            break;
+        case '09d':
+            document.getElementById('currentWeatherIcon').src = `../assets/rain.png`
+            break;
+        case '10d':
+            document.getElementById('currentWeatherIcon').src = `../assets/rain.png`
+            break;
+        case '09n':
+            document.getElementById('currentWeatherIcon').src = `../assets/rain.png`
+            break;
+        case '10n':
+            document.getElementById('currentWeatherIcon').src = `../assets/rain.png`
+            break;
+        case '11d':
+            document.getElementById('currentWeatherIcon').src = `../assets/thunder.png`
+            break;
+        case '11n':
+            document.getElementById('currentWeatherIcon').src = `../assets/thunder.png`
+            break;
+        case '13d':
+            document.getElementById('currentWeatherIcon').src = `../assets/snow.png`
+            break;
+        case '13n':
+            document.getElementById('currentWeatherIcon').src = `../assets/snow.png`
+            break;
+        case '50d': 
+            document.getElementById('currentWeatherIcon').src = `../assets/windy.png`
+            break;
+        case '50n':
+            document.getElementById('currentWeatherIcon').src = `../assets/windy.png`
+            break;
+        default:
+            break;
+    }
+
+    switch (dataIcon1) {
+        case '04d':
+            document.getElementById('icon1').src = `../assets/overcastclouds.png`
+            break;
+        case '04n':
+            document.getElementById('icon1').src = `../assets/overcastclouds.png`
+            break;
+        case '01d':
+            document.getElementById('icon1').src = `../assets/clearsky.png`
+            break;
+        case '01n':
+            document.getElementById('icon1').src = `../assets/nightsky.png`
+            break;
+        case '03d':
+            document.getElementById('icon1').src = `../assets/scatteredclouds.png`
+            break;
+        case '03n':
+            document.getElementById('icon1').src = `../assets/scatteredclouds.png`
+            break;
+        case '09d':
+            document.getElementById('icon1').src = `../assets/rain.png`
+            break;
+        case '10d':
+            document.getElementById('icon1').src = `../assets/rain.png`
+            break;
+        case '09n':
+            document.getElementById('icon1').src = `../assets/rain.png`
+            break;
+        case '10n':
+            document.getElementById('icon1').src = `../assets/rain.png`
+            break;
+        case '11d':
+            document.getElementById('icon1').src = `../assets/thunder.png`
+            break;
+        case '11n':
+            document.getElementById('icon1').src = `../assets/thunder.png`
+            break;
+        case '13d':
+            document.getElementById('icon1').src = `../assets/snow.png`
+            break;
+        case '13n':
+            document.getElementById('icon1').src = `../assets/snow.png`
+            break;
+        case '50d': 
+            document.getElementById('icon1').src = `../assets/windy.png`
+            break;
+        case '50n':
+            document.getElementById('icon1').src = `../assets/windy.png`
+            break;
+        default:
+            break;
+    }
+
+    switch (dataIcon2) {
+        case '04d':
+            document.getElementById('icon2').src = `../assets/overcastclouds.png`
+            break;
+        case '04n':
+            document.getElementById('icon2').src = `../assets/overcastclouds.png`
+            break;
+        case '01d':
+            document.getElementById('icon2').src = `../assets/clearsky.png`
+            break;
+        case '01n':
+            document.getElementById('icon2').src = `../assets/nightsky.png`
+            break;
+        case '03d':
+            document.getElementById('icon2').src = `../assets/scatteredclouds.png`
+            break;
+        case '03n':
+            document.getElementById('icon2').src = `../assets/scatteredclouds.png`
+            break;
+        case '09d':
+            document.getElementById('icon2').src = `../assets/rain.png`
+            break;
+        case '10d':
+            document.getElementById('icon2').src = `../assets/rain.png`
+            break;
+        case '09n':
+            document.getElementById('icon2').src = `../assets/rain.png`
+            break;
+        case '10n':
+            document.getElementById('icon2').src = `../assets/rain.png`
+            break;
+        case '11d':
+            document.getElementById('icon2').src = `../assets/thunder.png`
+            break;
+        case '11n':
+            document.getElementById('icon2').src = `../assets/thunder.png`
+            break;
+        case '13d':
+            document.getElementById('icon2').src = `../assets/snow.png`
+            break;
+        case '13n':
+            document.getElementById('icon2').src = `../assets/snow.png`
+            break;
+        case '50d': 
+            document.getElementById('icon2').src = `../assets/windy.png`
+            break;
+        case '50n':
+            document.getElementById('icon2').src = `../assets/windy.png`
+            break;
+        default:
+            break;
+    }
+    
+    switch (dataIcon3) {
+        case '04d':
+            document.getElementById('icon3').src = `../assets/overcastclouds.png`
+            break;
+        case '04n':
+            document.getElementById('icon3').src = `../assets/overcastclouds.png`
+            break;
+        case '01d':
+            document.getElementById('icon3').src = `../assets/clearsky.png`
+            break;
+        case '01n':
+            document.getElementById('icon3').src = `../assets/nightsky.png`
+            break;
+        case '03d':
+            document.getElementById('icon3').src = `../assets/scatteredclouds.png`
+            break;
+        case '03n':
+            document.getElementById('icon3').src = `../assets/scatteredclouds.png`
+            break;
+        case '09d':
+            document.getElementById('icon3').src = `../assets/rain.png`
+            break;
+        case '10d':
+            document.getElementById('icon3').src = `../assets/rain.png`
+            break;
+        case '09n':
+            document.getElementById('icon3').src = `../assets/rain.png`
+            break;
+        case '10n':
+            document.getElementById('icon3').src = `../assets/rain.png`
+            break;
+        case '11d':
+            document.getElementById('icon3').src = `../assets/thunder.png`
+            break;
+        case '11n':
+            document.getElementById('icon3').src = `../assets/thunder.png`
+            break;
+        case '13d':
+            document.getElementById('icon3').src = `../assets/snow.png`
+            break;
+        case '13n':
+            document.getElementById('icon3').src = `../assets/snow.png`
+            break;
+        case '50d': 
+            document.getElementById('icon3').src = `../assets/windy.png`
+            break;
+        case '50n':
+            document.getElementById('icon3').src = `../assets/windy.png`
+            break;
+        default:
+            break;
+    }
+
+    switch (dataIcon4) {
+        case '04d':
+            document.getElementById('icon4').src = `../assets/overcastclouds.png`
+            break;
+        case '04n':
+            document.getElementById('icon4').src = `../assets/overcastclouds.png`
+            break;
+        case '01d':
+            document.getElementById('icon4').src = `../assets/clearsky.png`
+            break;
+        case '01n':
+            document.getElementById('icon4').src = `../assets/nightsky.png`
+            break;
+        case '03d':
+            document.getElementById('icon4').src = `../assets/scatteredclouds.png`
+            break;
+        case '03n':
+            document.getElementById('icon4').src = `../assets/scatteredclouds.png`
+            break;
+        case '09d':
+            document.getElementById('icon4').src = `../assets/rain.png`
+            break;
+        case '10d':
+            document.getElementById('icon4').src = `../assets/rain.png`
+            break;
+        case '09n':
+            document.getElementById('icon4').src = `../assets/rain.png`
+            break;
+        case '10n':
+            document.getElementById('icon4').src = `../assets/rain.png`
+            break;
+        case '11d':
+            document.getElementById('icon4').src = `../assets/thunder.png`
+            break;
+        case '11n':
+            document.getElementById('icon4').src = `../assets/thunder.png`
+            break;
+        case '13d':
+            document.getElementById('icon4').src = `../assets/snow.png`
+            break;
+        case '13n':
+            document.getElementById('icon4').src = `../assets/snow.png`
+            break;
+        case '50d': 
+            document.getElementById('icon4').src = `../assets/windy.png`
+            break;
+        case '50n':
+            document.getElementById('icon4').src = `../assets/windy.png`
+            break;
+        default:
+            break;
+    }
+
+    switch (dataIcon5) {
+        case '04d':
+            document.getElementById('icon5').src = `../assets/overcastclouds.png`
+            break;
+        case '04n':
+            document.getElementById('icon5').src = `../assets/overcastclouds.png`
+            break;
+        case '01d':
+            document.getElementById('icon5').src = `../assets/clearsky.png`
+            break;
+        case '01n':
+            document.getElementById('icon5').src = `../assets/nightsky.png`
+            break;
+        case '03d':
+            document.getElementById('icon5').src = `../assets/scatteredclouds.png`
+            break;
+        case '03n':
+            document.getElementById('icon5').src = `../assets/scatteredclouds.png`
+            break;
+        case '09d':
+            document.getElementById('icon5').src = `../assets/rain.png`
+            break;
+        case '10d':
+            document.getElementById('icon5').src = `../assets/rain.png`
+            break;
+        case '09n':
+            document.getElementById('icon5').src = `../assets/rain.png`
+            break;
+        case '10n':
+            document.getElementById('icon5').src = `../assets/rain.png`
+            break;
+        case '11d':
+            document.getElementById('icon5').src = `../assets/thunder.png`
+            break;
+        case '11n':
+            document.getElementById('icon5').src = `../assets/thunder.png`
+            break;
+        case '13d':
+            document.getElementById('icon5').src = `../assets/snow.png`
+            break;
+        case '13n':
+            document.getElementById('icon5').src = `../assets/snow.png`
+            break;
+        case '50d': 
+            document.getElementById('icon5').src = `../assets/windy.png`
+            break;
+        case '50n':
+            document.getElementById('icon5').src = `../assets/windy.png`
+            break;
+        default:
+            break;
+    }   
 }
 
 
