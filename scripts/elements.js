@@ -1,17 +1,17 @@
 import {apiKey} from './environment.js'
 
+import { CurrentWeather } from './app.js';
+
 async function MakeCard(cityName) {
 
         const promise = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${apiKey}`)
         const data = await promise.json();
-
-    
     
         let latitude = data[0].lat;
         let longitude = data[0].lon;
         const promise2 = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&appid=${apiKey}`)
         const data2 = await promise2.json();
-    
+
     console.log(data2)    
 
     //innerDiv1
@@ -21,8 +21,8 @@ async function MakeCard(cityName) {
     p1.textContent = data2.name;
 
     let button1 = document.createElement('button')
-    button1.style ="margin-left: 10px; background-color: #FFF9C8; border-radius: 30px; width: 30px;";
-    button1.className = "same";
+    button1.style ="margin-left: 30px; background-color: #FFF9C8; border-radius: 30px; width: 30px;";
+    button1.className = "same removeBtn";
     button1.textContent = "-";
 
     let innerDiv1 = document.createElement('div');
@@ -38,8 +38,8 @@ async function MakeCard(cityName) {
 
     let p2 = document.createElement("p");
     p2.id = "favoritesCurrentWeather";
-    p2.className = "same favFont2"; 
-    p2.textContent = data2.main.temp;
+    p2.className = "same favFont2 center"; 
+    p2.textContent = data2.main.temp + "°";
 
     //innerDiv2
     let p3 = document.createElement('p');
@@ -47,7 +47,7 @@ async function MakeCard(cityName) {
     p3.textContent = "LO:";
 
     let img3 = document.createElement('img');
-    img3.style = "width: 80px;";
+    img3.style = "width: 100px; margin-right: 20px; margin-left: 20px;";
     img3.id = "favoritesWeatherBar";
     img3.className = "same";
     img3.src = "../assets/weatherbar.png"
@@ -67,17 +67,18 @@ async function MakeCard(cityName) {
     let p5 = document.createElement('p');
     p5.id = "favMinTemp";
     p5.className = "same favFont3";
-    p5.textContent = data2.main.temp_min;
+    p5.textContent = data2.main.temp_min + "°";
 
     let p6 = document.createElement("p");
     p6.id = "favMaxTemp";
-    p6.style = "margin-left: 100px;";
+    p6.style = "margin-left: 95px;";
     p6.className = "same favFont3";
-    p6.textContent = data2.main.temp_max;
+    p6.textContent = data2.main.temp_max + "°";
 
     //column div
     let columnDiv = document.createElement('div');
-    columnDiv.className = "col-2 favoritesBorder";
+    columnDiv.className = "col-2 favoritesBorder same";
+    columnDiv.style = "margin: 20px;"
 
     columnDiv.appendChild(innerDiv1);
     columnDiv.appendChild(img2);
@@ -86,17 +87,9 @@ async function MakeCard(cityName) {
     columnDiv.appendChild(p5);
     columnDiv.appendChild(p6);
 
-    let rowDiv = document.createElement('div')
-    rowDiv.className = "row";
+    injectHere.appendChild(columnDiv)
 
-    rowDiv.appendChild(columnDiv);
 
-    let contDiv = document.createElement('div')
-    contDiv.className = "container";
-
-    contDiv.appendChild(rowDiv);
-
-    injectHere.appendChild(contDiv)
 }
 
 {/* <div id="injectHere" class="container">

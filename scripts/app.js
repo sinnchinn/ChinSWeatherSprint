@@ -41,7 +41,7 @@ let minTemp5 = document.getElementById('minTemp5');
 let feelsLike = document.getElementById('feelsLike');
 let humidity = document.getElementById('humidity');
 let iconData = document.getElementById('iconData');
-let removeBtn = document.getElementById('removeBtn');
+let removeFavBtn = document.getElementById('removeFavBtn');
 
 let favoriteArray = [];
 
@@ -942,13 +942,12 @@ searchBtn.addEventListener('click', async function(e) {
     console.log(userInput.value);
 });
 
-removeBtn.addEventListener('click', function(e) {
-    let index = favoriteArray.indexOf(MakeCard(favoriteArray[i]));
+removeFavBtn.addEventListener('click', function(e) {
+    let index = favoriteArray.indexOf(userInput.value);
     favoriteArray.splice(index, 1)
     console.log(favoriteArray);
 
     localStorage.setItem('favorites', JSON.stringify(favoriteArray));
-
 })
 
 
@@ -966,4 +965,4 @@ function getFavorites() {
 CurrentWeather();
 WeatherData();
 
-
+export {CurrentWeather}
