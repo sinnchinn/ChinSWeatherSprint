@@ -1,7 +1,5 @@
 import {apiKey} from './environment.js'
 
-import { CurrentWeather } from './app.js';
-
 async function MakeCard(cityName) {
 
         const promise = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${apiKey}`)
@@ -22,6 +20,7 @@ async function MakeCard(cityName) {
 
     let button1 = document.createElement('button')
     button1.style ="margin-left: 30px; background-color: #FFF9C8; border-radius: 30px; width: 30px;";
+    button1.id = "removeFavBtn"
     button1.className = "same removeBtn";
     button1.textContent = "-";
 
@@ -47,7 +46,7 @@ async function MakeCard(cityName) {
     p3.textContent = "LO:";
 
     let img3 = document.createElement('img');
-    img3.style = "width: 100px; margin-right: 20px; margin-left: 20px;";
+    img3.style = "width: 100px; margin-right: 20px; margin-left: 25px;";
     img3.id = "favoritesWeatherBar";
     img3.className = "same";
     img3.src = "../assets/weatherbar.png"
@@ -71,14 +70,14 @@ async function MakeCard(cityName) {
 
     let p6 = document.createElement("p");
     p6.id = "favMaxTemp";
-    p6.style = "margin-left: 95px;";
+    p6.style = "margin-left: 100px;";
     p6.className = "same favFont3";
     p6.textContent = data2.main.temp_max + "°";
 
     //column div
     let columnDiv = document.createElement('div');
     columnDiv.className = "col-2 favoritesBorder same";
-    columnDiv.style = "margin: 20px;"
+    columnDiv.style = "margin: 25px;"
 
     columnDiv.appendChild(innerDiv1);
     columnDiv.appendChild(img2);

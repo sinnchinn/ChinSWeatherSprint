@@ -943,11 +943,11 @@ searchBtn.addEventListener('click', async function(e) {
 });
 
 removeFavBtn.addEventListener('click', function(e) {
-    let index = favoriteArray.indexOf(userInput.value);
+    let index = favoriteArray.indexOf(MakeCard(favoriteArray[i]));
     favoriteArray.splice(index, 1)
     console.log(favoriteArray);
 
-    localStorage.setItem('favorites', JSON.stringify(favoriteArray));
+    localStorage.removeItem('favorites', JSON.stringify(favoriteArray));
 })
 
 
@@ -964,5 +964,3 @@ function getFavorites() {
 
 CurrentWeather();
 WeatherData();
-
-export {CurrentWeather}
