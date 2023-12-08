@@ -943,11 +943,11 @@ searchBtn.addEventListener('click', async function(e) {
 });
 
 removeFavBtn.addEventListener('click', function(e) {
-    let index = favoriteArray.indexOf(MakeCard(favoriteArray[i]));
+    let index = favoriteArray.indexOf(cityName);
     favoriteArray.splice(index, 1)
     console.log(favoriteArray);
 
-    localStorage.removeItem('favorites', JSON.stringify(favoriteArray));
+    localStorage.setItem('favorites', JSON.stringify(favoriteArray));
 })
 
 

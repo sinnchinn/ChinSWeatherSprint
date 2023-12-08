@@ -56,7 +56,7 @@ async function MakeCard(cityName) {
     p4.textContent = "HIGH:";
 
     let innerDiv2 = document.createElement('div');
-    // innerDiv2.style = "text-align: center;";
+    innerDiv2.style = "text-align: center;";
 
     innerDiv2.appendChild(p3);
     innerDiv2.appendChild(img3);
@@ -70,7 +70,7 @@ async function MakeCard(cityName) {
 
     let p6 = document.createElement("p");
     p6.id = "favMaxTemp";
-    p6.style = "margin-left: 100px;";
+    p6.style = "margin-left: 95px;";
     p6.className = "same favFont3";
     p6.textContent = data2.main.temp_max + "°";
 
@@ -88,6 +88,7 @@ async function MakeCard(cityName) {
 
     injectHere.appendChild(columnDiv)
 
+    AllIcons();
 
 }
 
