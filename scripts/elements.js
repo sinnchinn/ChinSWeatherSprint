@@ -2,6 +2,7 @@ import {apiKey} from './environment.js'
 
 import { favoriteArray } from './app.js';
 
+
 let injectHere = document.getElementById('injectHere');
 
 async function MakeCard(cityName, stateName) {
@@ -38,6 +39,7 @@ async function MakeCard(cityName, stateName) {
         for(let i = 0; i < favoriteArray.length; i++){
             console.log('favorites');
             MakeCard(favoriteArray[i]);
+            AllIcons(favoriteArray[i]);
         }
     })
 

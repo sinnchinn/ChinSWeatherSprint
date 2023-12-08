@@ -957,4 +957,4 @@ function getFavorites() {
 CurrentWeather();
 WeatherData();
 
-export {favoriteArray}
+export {favoriteArray, CurrentWeather}
