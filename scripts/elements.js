@@ -4,11 +4,12 @@ import { favoriteArray } from './app.js';
 
 let injectHere = document.getElementById('injectHere');
 
-async function MakeCard(cityName) {
+async function MakeCard(cityName, stateName) {
 
-        const promise = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${apiKey}`)
+        const promise = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${cityName}, ${stateName}&limit=1&appid=${apiKey}`)
         const data = await promise.json();
-    
+        console.log(data);
+
         let latitude = data[0].lat;
         let longitude = data[0].lon;
         const promise2 = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&appid=${apiKey}`)
@@ -20,11 +21,10 @@ async function MakeCard(cityName) {
     let p1 = document.createElement('p')
     p1.className = "same favFont";
     p1.id = "favoritesCity";
-    p1.textContent = data2.name;
+    p1.textContent = data[0].name + ', ' + data[0].state;
 
     let button1 = document.createElement('button')
-    button1.style ="margin-left: 30px; background-color: #FFF9C8; border-radius: 30px; width: 30px;";
-    button1.id = "removeFavBtn"
+    button1.style ="margin-left: 20px; background-color: #FFF9C8; border-radius: 30px; width: 30px;";
     button1.className = "same removeBtn";
     button1.textContent = "-";
     button1.addEventListener('click', function(e) {
@@ -63,7 +63,7 @@ async function MakeCard(cityName) {
     p3.textContent = "LO:";
 
     let img3 = document.createElement('img');
-    img3.style = "width: 100px; margin-right: 20px; margin-left: 25px;";
+    img3.style = "width: 120px; margin-right: 20px; margin-left: 25px;";
     img3.id = "favoritesWeatherBar";
     img3.className = "same";
     img3.src = "../assets/weatherbar.png"
@@ -87,7 +87,7 @@ async function MakeCard(cityName) {
 
     let p6 = document.createElement("p");
     p6.id = "favMaxTemp";
-    p6.style = "margin-left: 95px;";
+    p6.style = "margin-left: 140px;";
     p6.className = "same favFont3";
     p6.textContent = data2.main.temp_max + "°";
 
