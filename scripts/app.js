@@ -434,45 +434,45 @@ async function success(position) {
     // current weather forecast
     currentDate.innerText = now.toDateString();
     currentLocation.innerText = weatherLocal.name.toUpperCase();
-    currentTemp.innerText = weatherLocal.main.temp + '°';
-    currentMaxTemp.innerText = weatherLocal.main.temp_max + '°';
-    currentMinTemp.innerText = weatherLocal.main.temp_min + '°';
-    feelsLike.innerText = weatherLocal.main.feels_like + '°';
-    humidity.innerText = weatherLocal.main.humidity + '%';
+    currentTemp.innerText = Math.round(weatherLocal.main.temp) + '°';
+    currentMaxTemp.innerText = Math.round(weatherLocal.main.temp_max) + '°';
+    currentMinTemp.innerText = Math.round(weatherLocal.main.temp_min) + '°';
+    feelsLike.innerText = Math.round(weatherLocal.main.feels_like) + '°';
+    humidity.innerText = Math.round(weatherLocal.main.humidity) + '%';
     iconData.innerText = weatherLocal.weather[0].description;
 
     // day 1, 5 day forecast
     laterDate1.innerText = later1.toDateString();
-    maxTemp1.innerText = weather5Day.list[1].main.temp_max + '°';
-    minTemp1.innerText = weather5Day.list[1].main.temp_min + '°';
+    maxTemp1.innerText = Math.round(weather5Day.list[1].main.temp_max) + '°';
+    minTemp1.innerText = Math.round(weather5Day.list[1].main.temp_min) + '°';
     
     // day 2, 5 day forecast
     laterDate2.innerText = later2.toDateString();
-    maxTemp2.innerText = weather5Day.list[9].main.temp_max + '°';
-    minTemp2.innerText = weather5Day.list[9].main.temp_min + '°';
+    maxTemp2.innerText = Math.round(weather5Day.list[9].main.temp_max) + '°';
+    minTemp2.innerText = Math.round(weather5Day.list[9].main.temp_min) + '°';
 
     // day 3, 5 day forecast
     laterDate3.innerText = later3.toDateString();
-    maxTemp3.innerText = weather5Day.list[17].main.temp_max + '°';
-    minTemp3.innerText = weather5Day.list[17].main.temp_min + '°';
+    maxTemp3.innerText = Math.round(weather5Day.list[17].main.temp_max) + '°';
+    minTemp3.innerText = Math.round(weather5Day.list[17].main.temp_min) + '°';
 
     // day 4, 5 day forecast 
     laterDate4.innerText = later4.toDateString();
-    maxTemp4.innerText = weather5Day.list[25].main.temp_max + '°';
-    minTemp4.innerText = weather5Day.list[25].main.temp_min + '°';
+    maxTemp4.innerText = Math.round(weather5Day.list[25].main.temp_max) + '°';
+    minTemp4.innerText = Math.round(weather5Day.list[25].main.temp_min) + '°';
 
     // day 5, 5 day forecast
     laterDate5.innerText = later5.toDateString();
-    maxTemp5.innerText = weather5Day.list[33].main.temp_max + '°';
-    minTemp5.innerText = weather5Day.list[33].main.temp_min + '°';
-    console.log(Date());
-    
+    maxTemp5.innerText = Math.round(weather5Day.list[33].main.temp_max) + '°';
+    minTemp5.innerText = Math.round(weather5Day.list[33].main.temp_min) + '°';    
 
 }
 
 
 function errorFunc(error) {
     console.log(error.message);
+    WeatherData(37.9577, 121.2908);
+    CurrentWeather(37.9577, 121.2908)
 }
 
 async function WeatherData(latitude, longitude) {
@@ -516,37 +516,37 @@ async function SearchInput(cityName, stateName) {
 
     // current weather forecast
     currentDate.innerText = now.toDateString();
-    currentTemp.innerText = weatherLocal.main.temp + '°';
-    currentMaxTemp.innerText = weatherLocal.main.temp_max + '°';
-    currentMinTemp.innerText = weatherLocal.main.temp_min + '°';
-    feelsLike.innerText = weatherLocal.main.feels_like + '°';
-    humidity.innerText = weatherLocal.main.humidity + '%';
+    currentTemp.innerText = Math.round(weatherLocal.main.temp) + '°';
+    currentMaxTemp.innerText = Math.round(weatherLocal.main.temp_max) + '°';
+    currentMinTemp.innerText = Math.round(weatherLocal.main.temp_min) + '°';
+    feelsLike.innerText = Math.round(weatherLocal.main.feels_like) + '°';
+    humidity.innerText = Math.round(weatherLocal.main.humidity) + '%';
     iconData.innerText = weatherLocal.weather[0].description;
 
     // day 1, 5 day forecast
     laterDate1.innerText = later1.toDateString();
-    maxTemp1.innerText = weather5Day.list[1].main.temp_max + '°';
-    minTemp1.innerText = weather5Day.list[1].main.temp_min + '°';
+    maxTemp1.innerText = Math.round(weather5Day.list[1].main.temp_max) + '°';
+    minTemp1.innerText = Math.round(weather5Day.list[1].main.temp_min) + '°';
     
     // day 2, 5 day forecast
     laterDate2.innerText = later2.toDateString();
-    maxTemp2.innerText = weather5Day.list[9].main.temp_max + '°';
-    minTemp2.innerText = weather5Day.list[9].main.temp_min + '°';
+    maxTemp2.innerText = Math.round(weather5Day.list[9].main.temp_max) + '°';
+    minTemp2.innerText = Math.round(weather5Day.list[9].main.temp_min) + '°';
 
     // day 3, 5 day forecast
     laterDate3.innerText = later3.toDateString();
-    maxTemp3.innerText = weather5Day.list[17].main.temp_max + '°';
-    minTemp3.innerText = weather5Day.list[17].main.temp_min + '°';
+    maxTemp3.innerText = Math.round(weather5Day.list[17].main.temp_max) + '°';
+    minTemp3.innerText = Math.round(weather5Day.list[17].main.temp_min) + '°';
 
     // day 4, 5 day forecast 
     laterDate4.innerText = later4.toDateString();
-    maxTemp4.innerText = weather5Day.list[25].main.temp_max + '°';
-    minTemp4.innerText = weather5Day.list[25].main.temp_min + '°';
+    maxTemp4.innerText = Math.round(weather5Day.list[25].main.temp_max) + '°';
+    minTemp4.innerText = Math.round(weather5Day.list[25].main.temp_min) + '°';
 
     // day 5, 5 day forecast
     laterDate5.innerText = later5.toDateString();
-    maxTemp5.innerText = weather5Day.list[33].main.temp_max + '°';
-    minTemp5.innerText = weather5Day.list[33].main.temp_min + '°';
+    maxTemp5.innerText = Math.round(weather5Day.list[33].main.temp_max) + '°';
+    minTemp5.innerText = Math.round(weather5Day.list[33].main.temp_min) + '°';
 
 
     // icons
@@ -954,7 +954,7 @@ function getFavorites() {
 
 }
 
-CurrentWeather();
-WeatherData();
+// CurrentWeather();
+// WeatherData();
 
 export {favoriteArray, CurrentWeather}

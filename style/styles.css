@@ -44,8 +44,8 @@
 
 .favFont {
     font-family: 'Orbitron', sans-serif;
-    font-size: 13px;
-    font-weight: bold;
+    font-size: 15px;
+    font-weight: boldera;
 }
 
 .wrapper {
@@ -235,7 +235,7 @@
 }
 
 .weatherBar {
-    width: 60px;
+    width: 120px;
     height: 20px;
 }
 
@@ -408,7 +408,7 @@
     border-radius: 10px;
 }
 
-.favFont {
+.favFontPage {
     font-family: 'Sometype Mono', monospace;
     font-weight: bolder;
     font-size: 15px;

@@ -20,7 +20,7 @@ async function MakeCard(cityName, stateName) {
 
     //innerDiv1
     let p1 = document.createElement('p')
-    p1.className = "same favFont";
+    p1.className = "same favFontPage";
     p1.id = "favoritesCity";
     p1.textContent = data[0].name + ', ' + data[0].state;
 
@@ -58,11 +58,11 @@ async function MakeCard(cityName, stateName) {
     let p2 = document.createElement("p");
     p2.id = "favoritesCurrentWeather";
     p2.className = "same favFont2 center"; 
-    p2.textContent = data2.main.temp + "°";
+    p2.textContent = Math.round(data2.main.temp) + "°";
 
     //innerDiv2
     let p3 = document.createElement('p');
-    p3.className = "same favFont";
+    p3.className = "same favFontPage";
     p3.textContent = "LO:";
 
     let img3 = document.createElement('img');
@@ -73,7 +73,7 @@ async function MakeCard(cityName, stateName) {
     img3.alt = "weather bar icon";
 
     let p4 = document.createElement('p');
-    p4.className = "same favFont";
+    p4.className = "same favFontPage";
     p4.textContent = "HIGH:";
 
     let innerDiv2 = document.createElement('div');
@@ -86,14 +86,15 @@ async function MakeCard(cityName, stateName) {
     //p tags
     let p5 = document.createElement('p');
     p5.id = "favMinTemp";
+    p5.style = "margin-left: 10px"
     p5.className = "same favFont3";
-    p5.textContent = data2.main.temp_min + "°";
+    p5.textContent = Math.round(data2.main.temp_min) + "°";
 
     let p6 = document.createElement("p");
     p6.id = "favMaxTemp";
-    p6.style = "margin-left: 140px;";
+    p6.style = "margin-left: 170px;";
     p6.className = "same favFont3";
-    p6.textContent = data2.main.temp_max + "°";
+    p6.textContent = Math.round(data2.main.temp_max) + "°";
 
     //column div
     let columnDiv = document.createElement('div');
