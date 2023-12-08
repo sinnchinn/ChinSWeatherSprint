@@ -47,10 +47,11 @@ async function MakeCard(cityName, stateName) {
     innerDiv1.appendChild(button1);
 
     //img and p tag
-    let img2 = document.createElement("img");
-    img2.id = "favoritesIcon";
-    img2.src = "";
-    img2.alt = "";
+    //couldnt get the icons to work, only worked on the first favorite. icons weren't showing up on any of the other favorites.
+    // let img2 = document.createElement("img");
+    // img2.id = "favoritesIcon";
+    // img2.src = "";
+    // img2.alt = "favorites icon";
 
     let p2 = document.createElement("p");
     p2.id = "favoritesCurrentWeather";
@@ -67,6 +68,7 @@ async function MakeCard(cityName, stateName) {
     img3.id = "favoritesWeatherBar";
     img3.className = "same";
     img3.src = "../assets/weatherbar.png"
+    img3.alt = "weather bar icon";
 
     let p4 = document.createElement('p');
     p4.className = "same favFont";
@@ -97,7 +99,7 @@ async function MakeCard(cityName, stateName) {
     columnDiv.style = "margin: px; margin-left: 70px; margin-bottom: 30px"
 
     columnDiv.appendChild(innerDiv1);
-    columnDiv.appendChild(img2);
+    // columnDiv.appendChild(img2);
     columnDiv.appendChild(p2);
     columnDiv.appendChild(innerDiv2);
     columnDiv.appendChild(p5);
