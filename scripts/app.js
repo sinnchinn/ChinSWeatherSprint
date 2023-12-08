@@ -1,5 +1,7 @@
 import {apiKey} from './environment.js'
 
+import{MakeCard} from './elements.js'
+
 navigator.geolocation.getCurrentPosition(success, errorFunc);
 
 //user input
@@ -39,8 +41,9 @@ let minTemp5 = document.getElementById('minTemp5');
 let feelsLike = document.getElementById('feelsLike');
 let humidity = document.getElementById('humidity');
 let iconData = document.getElementById('iconData');
+let removeBtn = document.getElementById('removeBtn');
 
-
+let favoriteArray = [];
 
 async function success(position) {
 
@@ -58,7 +61,7 @@ async function success(position) {
     let later4 = new Date(weather5Day.list[25].dt_txt);
     let later5 = new Date(weather5Day.list[33].dt_txt);
 
-    // icons
+    // // icons
     let dataIcon = weatherLocal.weather[0].icon;
     let dataIcon1 = weather5Day.list[1].weather[0].icon;
     let dataIcon2 = weather5Day.list[9].weather[0].icon;
@@ -79,6 +82,12 @@ async function success(position) {
             break;
         case '01d':
             document.getElementById('currentWeatherIcon').src = `../assets/clearsky.png`
+            break;
+        case '02d': 
+            document.getElementById('currentWeatherIcon').src = `../assets/fewclouds.png`
+            break;
+        case '02n':
+            document.getElementById('currentWeatherIcon').src = `../assets/fewclouds.png`
             break;
         case '03d':
             document.getElementById('currentWeatherIcon').src = `../assets/scatteredclouds.png`
@@ -133,6 +142,12 @@ async function success(position) {
         case '01n':
             document.getElementById('icon1').src = `../assets/nightsky.png`
             break;
+        case '02d': 
+            document.getElementById('icon1').src = `../assets/fewclouds.png`
+            break;
+        case '02n':
+            document.getElementById('icon1').src = `../assets/fewclouds.png`
+            break;
         case '03d':
             document.getElementById('icon1').src = `../assets/scatteredclouds.png`
             break;
@@ -185,6 +200,12 @@ async function success(position) {
             break;
         case '01n':
             document.getElementById('icon2').src = `../assets/nightsky.png`
+            break;
+        case '02d': 
+            document.getElementById('icon2').src = `../assets/fewclouds.png`
+            break;
+        case '02n':
+            document.getElementById('icon2').src = `../assets/fewclouds.png`
             break;
         case '03d':
             document.getElementById('icon2').src = `../assets/scatteredclouds.png`
@@ -239,6 +260,12 @@ async function success(position) {
         case '01n':
             document.getElementById('icon3').src = `../assets/nightsky.png`
             break;
+        case '02d': 
+            document.getElementById('icon3').src = `../assets/fewclouds.png`
+            break;
+        case '02n':
+            document.getElementById('icon3').src = `../assets/fewclouds.png`
+            break;
         case '03d':
             document.getElementById('icon3').src = `../assets/scatteredclouds.png`
             break;
@@ -292,6 +319,12 @@ async function success(position) {
         case '01n':
             document.getElementById('icon4').src = `../assets/nightsky.png`
             break;
+        case '02d': 
+            document.getElementById('icon4').src = `../assets/fewclouds.png`
+            break;
+        case '02n':
+            document.getElementById('icon4').src = `../assets/fewclouds.png`
+            break;
         case '03d':
             document.getElementById('icon4').src = `../assets/scatteredclouds.png`
             break;
@@ -344,6 +377,12 @@ async function success(position) {
             break;
         case '01n':
             document.getElementById('icon5').src = `../assets/nightsky.png`
+            break;
+        case '02d': 
+            document.getElementById('icon5').src = `../assets/fewclouds.png`
+            break;
+        case '02n':
+            document.getElementById('icon5').src = `../assets/fewclouds.png`
             break;
         case '03d':
             document.getElementById('icon5').src = `../assets/scatteredclouds.png`
@@ -429,6 +468,7 @@ async function success(position) {
     minTemp5.innerText = weather5Day.list[33].main.temp_min + '°';
     console.log(Date());
     
+
 }
 
 
@@ -451,6 +491,7 @@ async function CurrentWeather(latitude, longitude) {
 
     return data;
 }
+
 
 async function SearchInput(cityName) {
     
@@ -531,6 +572,12 @@ async function SearchInput(cityName) {
         case '01d':
             document.getElementById('currentWeatherIcon').src = `../assets/clearsky.png`
             break;
+        case '02d': 
+            document.getElementById('currentWeatherIcon').src = `../assets/fewclouds.png`
+            break;
+        case '02n':
+            document.getElementById('currentWeatherIcon').src = `../assets/fewclouds.png`
+            break;
         case '03d':
             document.getElementById('currentWeatherIcon').src = `../assets/scatteredclouds.png`
             break;
@@ -583,6 +630,12 @@ async function SearchInput(cityName) {
             break;
         case '01n':
             document.getElementById('icon1').src = `../assets/nightsky.png`
+            break;
+        case '02d': 
+            document.getElementById('icon1').src = `../assets/fewclouds.png`
+            break;
+        case '02n':
+            document.getElementById('icon1').src = `../assets/fewclouds.png`
             break;
         case '03d':
             document.getElementById('icon1').src = `../assets/scatteredclouds.png`
@@ -637,6 +690,12 @@ async function SearchInput(cityName) {
         case '01n':
             document.getElementById('icon2').src = `../assets/nightsky.png`
             break;
+        case '02d': 
+            document.getElementById('icon2').src = `../assets/fewclouds.png`
+            break;
+        case '02n':
+            document.getElementById('icon2').src = `../assets/fewclouds.png`
+            break;
         case '03d':
             document.getElementById('icon2').src = `../assets/scatteredclouds.png`
             break;
@@ -689,6 +748,12 @@ async function SearchInput(cityName) {
             break;
         case '01n':
             document.getElementById('icon3').src = `../assets/nightsky.png`
+            break;
+        case '02d': 
+            document.getElementById('icon3').src = `../assets/fewclouds.png`
+            break;
+        case '02n':
+            document.getElementById('icon3').src = `../assets/fewclouds.png`
             break;
         case '03d':
             document.getElementById('icon3').src = `../assets/scatteredclouds.png`
@@ -743,6 +808,12 @@ async function SearchInput(cityName) {
         case '01n':
             document.getElementById('icon4').src = `../assets/nightsky.png`
             break;
+        case '02d': 
+            document.getElementById('icon4').src = `../assets/fewclouds.png`
+            break;
+        case '02n':
+            document.getElementById('icon4').src = `../assets/fewclouds.png`
+            break;
         case '03d':
             document.getElementById('icon4').src = `../assets/scatteredclouds.png`
             break;
@@ -796,6 +867,12 @@ async function SearchInput(cityName) {
         case '01n':
             document.getElementById('icon5').src = `../assets/nightsky.png`
             break;
+        case '02d': 
+            document.getElementById('icon5').src = `../assets/fewclouds.png`
+            break;
+        case '02n':
+            document.getElementById('icon5').src = `../assets/fewclouds.png`
+            break;
         case '03d':
             document.getElementById('icon5').src = `../assets/scatteredclouds.png`
             break;
@@ -836,16 +913,57 @@ async function SearchInput(cityName) {
             break;
     }   
 
-    CurrentIcon();
 }
 
+
+
+if(localStorage.getItem('favorites')) {
+    favoriteArray = JSON.parse(localStorage.getItem('favorites'));
+    getFavorites();
+}
+
+favoriteBtn.addEventListener('click', function(e) {
+
+    if(userInput.value === '') {
+        return;
+    }
+
+    favoriteArray.push(userInput.value);
+    userInput.value = '';
+    // console.log(userInput.value);
+    console.log(favoriteArray);
+
+    localStorage.setItem('favorites', JSON.stringify(favoriteArray));
+
+})
 
 searchBtn.addEventListener('click', async function(e) {
     await SearchInput(userInput.value);
     console.log(userInput.value);
 });
 
+removeBtn.addEventListener('click', function(e) {
+    let index = favoriteArray.indexOf(MakeCard(favoriteArray[i]));
+    favoriteArray.splice(index, 1)
+    console.log(favoriteArray);
+
+    localStorage.setItem('favorites', JSON.stringify(favoriteArray));
+
+})
+
+
+function getFavorites() {
+
+    console.log(favoriteArray.length);
+
+    for(let i = 0; i < favoriteArray.length; i++){
+        console.log('favorites');
+        MakeCard(favoriteArray[i]);
+    }
+
+}
 
 CurrentWeather();
 WeatherData();
+
 

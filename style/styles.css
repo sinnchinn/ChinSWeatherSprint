@@ -389,3 +389,37 @@
 }
 
 /* ----- NIGHT MODE END ----- */
+
+
+/* ----- FAVORITES PAGE START ----- */
+
+/* DAY MODE */
+
+.favoritesBorder {
+    background: rgba(200, 255, 229, .9);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.removebtn {
+    background-color: #FFF9C8;
+    border-radius: 10px;
+}
+
+.favFont {
+    font-family: 'Sometype Mono', monospace;
+    font-weight: bolder;
+    font-size: 15px;
+}
+
+.favFont2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.favFont3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+}
