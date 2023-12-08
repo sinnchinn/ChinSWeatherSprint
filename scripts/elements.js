@@ -94,7 +94,7 @@ async function MakeCard(cityName, stateName) {
     //column div
     let columnDiv = document.createElement('div');
     columnDiv.className = "col-2 favoritesBorder same";
-    columnDiv.style = "margin: 25px;"
+    columnDiv.style = "margin: px; margin-left: 70px; margin-bottom: 30px"
 
     columnDiv.appendChild(innerDiv1);
     columnDiv.appendChild(img2);
