@@ -41,7 +41,6 @@ let minTemp5 = document.getElementById('minTemp5');
 let feelsLike = document.getElementById('feelsLike');
 let humidity = document.getElementById('humidity');
 let iconData = document.getElementById('iconData');
-let removeFavBtn = document.getElementById('removeFavBtn');
 
 let favoriteArray = [];
 
@@ -493,13 +492,13 @@ async function CurrentWeather(latitude, longitude) {
 }
 
 
-async function SearchInput(cityName) {
+async function SearchInput(cityName, stateName) {
     
-    const promise = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=5&appid=${apiKey}`)
+    const promise = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${cityName},${stateName}&limit=5&appid=${apiKey}`)
     const data = await promise.json();
 
     console.log(data);
-    currentLocation.textContent = `${data[0].name.toUpperCase()}, ${data[0].state.toUpperCase()}, ${data[0].country.toUpperCase()}`;
+    currentLocation.textContent = `${data[0].name.toUpperCase()}, ${data[0].state.toUpperCase()}`;
 
     let latitude = data[0].lat;
     let longitude = data[0].lon;
@@ -942,13 +941,6 @@ searchBtn.addEventListener('click', async function(e) {
     console.log(userInput.value);
 });
 
-removeFavBtn.addEventListener('click', function(e) {
-    let index = favoriteArray.indexOf(cityName);
-    favoriteArray.splice(index, 1)
-    console.log(favoriteArray);
-
-    localStorage.setItem('favorites', JSON.stringify(favoriteArray));
-})
 
 
 function getFavorites() {
@@ -964,3 +956,5 @@ function getFavorites() {
 
 CurrentWeather();
 WeatherData();
+
+export {favoriteArray}

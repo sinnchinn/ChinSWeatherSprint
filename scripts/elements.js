@@ -1,5 +1,9 @@
 import {apiKey} from './environment.js'
 
+import { favoriteArray } from './app.js';
+
+let injectHere = document.getElementById('injectHere');
+
 async function MakeCard(cityName) {
 
         const promise = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${apiKey}`)
@@ -23,6 +27,19 @@ async function MakeCard(cityName) {
     button1.id = "removeFavBtn"
     button1.className = "same removeBtn";
     button1.textContent = "-";
+    button1.addEventListener('click', function(e) {
+        let index = favoriteArray.indexOf(cityName);
+        favoriteArray.splice(index, 1)
+
+        localStorage.setItem('favorites', JSON.stringify(favoriteArray));
+
+        injectHere.innerText = "";
+        console.log('i work');
+        for(let i = 0; i < favoriteArray.length; i++){
+            console.log('favorites');
+            MakeCard(favoriteArray[i]);
+        }
+    })
 
     let innerDiv1 = document.createElement('div');
     
@@ -88,7 +105,6 @@ async function MakeCard(cityName) {
 
     injectHere.appendChild(columnDiv)
 
-    AllIcons();
 
 }
 
